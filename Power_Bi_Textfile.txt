@@ -1,0 +1,8 @@
+=>FACT TABLE						DIMENSION TABLE
+
+Numerical data store करती है								Descriptive (details) data store करती है
+Example: Sales, Profit, Quantity			   Example: Customer Name, Product Name, Region
+Values repeat हो सकती हैं									Primary key usually unique होती है
+Table size बड़ा होता है										Table size छोटा होता है
+Calculations के लिए use होती है								Filtering और grouping के लिए use होती है
+Foreign keys होती हैं										Primary key होती है
