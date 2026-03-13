@@ -47,14 +47,33 @@ From 1
 9. Grouping & Aggregation
 -> Home → Group By -> Group by → Region
 Total Sales → Sum Revenue
+West=8243611.88
+North=8102325.14
+South=7287840.31
+East=7857624.97
+
 Avg Order Value → Average Revenue
+West=10719.91142
+North=10831.98548
+South=10107.9616
+East=10366.25985
+
 Transaction Count → Count Rows
+West=769
+North=748
+South=721
+East=75
 
 10. Data Profiling & Quality
--> View tab -> Column Quality,Column Distribution,Column Profile
+-> View tab -> Column Quality ,Column Distribution ,Column Profile✅
 
 11. Source Settings & Parameters
 -> Don't using this
 
 12.Refresh Simulation 
--> Don't using this
+-> Adding a new monthly file (April) to the folder source
+-> folder "Sales Data" previous files (Sales_Jan.xlsx, Sales_Feb.xlsx, Sales_Mar.xlsx).
+-> Add New File to Folder "Sales_Apr.xlsx" into the same folder.
+-> Open Power BI Desktop.
+-> Go to "Home → Refresh".
+-> Power BI automatically add file Sales_Apr.xlsx.
