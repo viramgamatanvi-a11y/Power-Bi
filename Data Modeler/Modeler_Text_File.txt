@@ -1,0 +1,112 @@
+=> 1. Model Construction & Relationships
+
+1. Imports All Fill to Power Query.
+
+2. Set Data Types:
+   Column	Type
+   IDs	        Whole Number
+   Revenue	Decimal
+   Date	        Date
+
+3. Remove Blank Rows:
+   Home->Remove Rows->Remove Blank Rows
+
+4. Close & Apply.
+
+5. Model View : Relationships Create
+
+   1. Customer_ Dim [Customer ID] = Sales_ Fact [Customer ID]
+      Cardinality -> Many → One
+      Filter -> Single
+
+   2. Product_ Dim[Product ID] = Sales _Fact [Product ID]
+      Cardinality -> Many → One
+      Filter -> Single
+
+   3. Region_ Dim[Region ID] = Sales_ Fact[Region ID]
+      Cardinality -> Many → One
+      Filter -> Single
+
+   4. Date_ Dim[Date Key] = Sales_ Fact[Date Key]
+      Cardinality -> Many → One
+      Filter -> Single
+
+   5. Sales_ Fact[Sales ID] = Returns_ Fact[Sales ID]
+      Cardinality -> Many → One
+      Filter -> Single
+
+   6. Date_ Dim[Date Key] = Returns_ Fact[Return Date Key]
+      Cardinality -> Many → One
+      Filter -> Single
+      =>Inactive relationship
+
+=> 2. Schema Design
+     -> Sales_ Fact = Connect Sales_ Fact to Product_ Dim , Customer_ Dim , Region_ Dim , Date_ Dim
+     -> Returns_ Fact = Connect Returns_ Fact to Sales_ Fact ,Date_ Dim 	
+
+   3. Demonstrate Cardinality
+
+     1 : Many(One-to-Many)
+     In a one-to-many relationship, a key value appears once in one table but can appear multiple times in another table.
+     Example: Customer_ Dim → Sales_ Fact
+
+     Many : 1(Many-to-One)
+     In a one-to-many relationship, a key value appears once in one table but can appear multiple times in another table.
+     Example: Sales_ Fact → Product_ Dim
+
+     1 : 1(One-to-One)
+     In a one-to-one relationship, a key value appears only once in both tables.    
+     Example: Sales_ Fact → Returns_ Fact 
+
+=> 3. Advanced Model Settings
+
+     1. Set Relationship Cardinality and Cross Filter
+  
+        -Relationships ko One-to-Many set kiya.
+        -Cross filter direction Single rakha for better performance.
+ 
+     2. Bidirectional Filters
+
+        -Bidirectional filters default me disable.
+        -Sirf zarurat hone par enable kiye ja sakte hain.
+
+     3. Inactive Relationship Simulation
+
+        -Date_ Dim aur Returns_ Fact ke beech inactive relationship create kiya.
+        -Measure me USERELATIONSHIP() function se use kiya.
+
+     4. Resolve Filter Ambiguity
+
+        -Model view me relationships check kiye.
+        -Circular filtering avoid karne ke liye Single filter direction use kiya.
+
+=> 4. Data Model Enhancements
+
+     1. Data Formats : 
+	Revenue → Currency
+	Quantity → Whole Number
+	Date → Date format
+
+     2. Data Categories : 
+        City → City
+	Country → Country
+	State -> State
+
+     3. Hierarchies : 
+	-> Date_ Dim Hierarchy
+	   Year
+	 → Quarter
+	 → Month
+	 → Date
+
+        -> Region_ Dim Hierarchy
+	   Country
+	 → State
+	 → City
+
+ 	-> Product_ Dim Hierarchy
+           Category
+         → Subcategory
+	 → ProductName
+
+
