@@ -58,27 +58,27 @@
      In a one-to-one relationship, a key value appears only once in both tables.    
      Example: Sales_ Fact → Returns_ Fact 
 
-=> 3. Advanced Model Settings
+=> 3. Advanced Model Settings 
 
-     1. Set Relationship Cardinality and Cross Filter
-  
-        -Relationships ko One-to-Many set kiya.
-        -Cross filter direction Single rakha for better performance.
- 
-     2. Bidirectional Filters
+      1. Set Relationship Cardinality and Cross Filter
+        
+        -Relationships are set to One-to-Many.
+        -Cross filter direction is kept Single for better performance.
 
-        -Bidirectional filters default me disable.
-        -Sirf zarurat hone par enable kiye ja sakte hain.
+      2. Bidirectional Filters
 
-     3. Inactive Relationship Simulation
+        -Bidirectional filters are disabled by default.
+        -They are enabled only when needed.
 
-        -Date_ Dim aur Returns_ Fact ke beech inactive relationship create kiya.
-        -Measure me USERELATIONSHIP() function se use kiya.
+      3. Inactive Relationship Simulation
 
-     4. Resolve Filter Ambiguity
+        -An inactive relationship is created between Date_ Dim and Returns_ Fact.
+        -It is used in measures with the USERELATIONSHIP() function.
 
-        -Model view me relationships check kiye.
-        -Circular filtering avoid karne ke liye Single filter direction use kiya.
+      4. Resolve Filter Ambiguity
+
+        -Relationships are checked in the Model view.
+        -Single filter direction is used to avoid circular filtering.
 
 => 4. Data Model Enhancements
 
