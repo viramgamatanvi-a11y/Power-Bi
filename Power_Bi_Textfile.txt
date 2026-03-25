@@ -1,0 +1,834 @@
+1. What is Power BI?
+=> Power BI - Microsoft Tool he jo Self-Service business intelligence platform.
+=> is me desktop aue web-based applications hote Hain Jinkee through ap data ko connect, model aur visualize       (Charts/reports/dashboards) kar skate ho.
+
+
+2. Excel = Date Analysis Tool
+   Power BI = Data Analysis + Advanced Visualization + Dashboards
+
+
+3. What is a different between Excel and power BI?
+=> | Scenario      | Excel                          | Power BI                               |
+| ------------- | ------------------------------------ | -------------------------------------------- |
+| Data size     | Small (few thousand rows)            | Large (lakhs / millions rows)                |
+| Purpose       | Data entry, formulas, quick analysis | Dashboards, reporting, insights              |
+| Visualization | Basic charts                         | Interactive dashboards (filters, drill-down) |
+| Sharing       | File share (.xlsx)                   | Online sharing (live dashboards)             |
+| Automation    | Manual refresh                       | Auto refresh (real-time possible)            |
+| Data sources  | Limited                              | Multiple (SQL, APIs, cloud, etc.)            |
+
+
+4. What is a POWER BI WORKFLOW?
+=> Connect → Transform → Load → Model → DAX → Visualize → Publish
+=> Report View -> table View -> Model View -> DAX Query View -> TMDL View
+=> Power BI Workflow me 2 Types hote hai
+1. Power BI “Back-End” => Power Query Editor
+2. Power BI “Front-End” => Model View , Data View , Report View
+=> Power Query Editor = Power Query Editor is a tool in Power BI used to clean, transform, and prepare data before loading it into the model.
+=> Model View = Relationship bana sakte hai two table ke beach me.
+=> Data View (Table View) = Data ko table format me dekhna , New columns (calculated columns) banana , Column ka data type and format change kr sakte hai.
+=> Report View = Isme hum charts, tables, aur dashboards bana sakte hai.
+=> ETL(Extract, Transform, Load)
+=>• The front-end includes the Data, Model \& Report views, where most of the modeling, analysis and visualization takes place
+• The back-end includes the Power Query Editor, where raw data is extracted, transformed, and loaded to the front-end (ETL)
+
+
+5. What is a different between BACK-END and FRONT-END?
+=> BACK-END
+-Connect \& extract data
+→ Different sources se data import karna (Excel, SQL, etc.)
+-Profile \& QA data
+→ Data ko check aur clean karna (errors, null values remove)
+-Transform \& shape tables
+→ Data ko modify karna (filter, sort, new columns banana, grouping)
+-Merge / Append queries
+→ Multiple tables ko join ya combine karna
+-Advanced transformation (M code)
+→ Complex changes ke liye advanced coding use karna
+
+=> FRONT-END
+-Build data models (relationships)
+→ Tables ke beech connection banana (primary key \& foreign key use karke)
+-Add calculated measures \& columns (DAX)
+→ Formulas use karke calculations banana (SUM, COUNT, etc.)
+-Design reports & dashboards
+→ Data ko charts aur graphs me convert karna (interactive report banana)
+-Publish & share (Power BI Service)
+→ Report ko cloud par upload karke dusro ke saath share karna 👍
+
+
+6. What is a HELPFUL RESOURCES?
+=> HELPFUL RESOURCES ka matlab hai aise useful tools , websites , ya materials jo learning ya kaam karne me madad karein.
+
+
+7. What is a TYPES OF DATA CONNECTORS?
+=> Excel, CSV File, Text file ,SQL Server, MySQL, Oracle , Web URL, JSON API, Ek folder ke andar multiple files ko combine karke data lena.
+
+
+8. What is a QUERY EDITING TOOLS?
+=> The HOME tab includes general settings and common table transformation tools.
+=> The TRANSFORM tab includes tools to modify existing columns (splitting/grouping, transposing, extracting text, etc.)
+=> The ADD COLUMN tools create new columns (based on conditional rules, text operations, calculations, dates, etc.)
+
+
+9. What is STORAGE \& CONNECTION MODES?
+=> 1. Import
+   Data Power BI ke andar store ho jata hai (memory me)
+   Reports fast chalte hain (default mode)
+=> 2. Direct Query
+   Data Power BI me store nahi hota
+   Direct database se live query run hoti hai
+   Real-time data milta hai
+=> 3. Composite Model (Dual)
+   Kuch data import hota hai aur kuch DirectQuery se aata hai
+   Dono ka mix use hota hai
+=> 4. Live Connection
+   Already published dataset (Power BI Service / Azure) se direct connect karte ho
+   Data ko change nahi kar sakte, sirf use kar sakte ho
+
+
+10. What is a DATA PROFILING: COLUMN QUALITY?
+=> Profiling tools like column quality, column distribution, and column profile
+=> 1. column quality = Column quality batata hai ki column ka data kitna correct hai.(Valid data, Error value, Empty value).
+=> 2. column distribution = column distribution batata hai ki column me value ka distribution kaisa hai (Unique value, Duplicate Value).
+=> 3. column profile = column profile column ki detailed information deta hai (Min ,Max , Average ,value count).
+
+
+11. What is a TEXT Tools? (Transform and Add column)
+=> 1. Split column = By Delimiter, By Number of characters, By positions, By Lowercase to Uppercase, BY Uppercase to Lowercase, By Digit to Non-Digit, By Non-Digit to Digit.
+=> 2. Format = Lowercase, Uppercase, Capitalize Each Word, Trim, Clean, Add Prefix(Text starting ma add),   Add Suffix(Text ending ma add).
+=> 3. Extract = Length, First character, last character, Range, Text Before Delimiter , Text After Delimiter.
+
+
+12. What is NUMERICAL Tools? (Transform and Add column)
+=> 1. Statistics = Sum, Min, Max, Median, Avg., Standard deviation, count values, count distinct values.
+=> 2. Standard = Add, Multiply, Divide, Subtract, Integer-divide, Modulo, Percentage , Precent of.
+=> 3. Scientific = Absolute value, Power, Square Root, Exponent, Logarithm, Factorial.
+=> 4. Trigonometry = Sin, Cos, Tan, Arcsine, Arccosine, Arctangent.
+=> 5. Rounding = Round Up, Round Down, Round.
+=> 6. Information = Is Even, Is Odd, Sign.
+
+
+13. What is Date & Time Tools?
+=> 1. Age = Current date aur given date ke beech ka difference nikalna.
+=> 2. Date Only = DateTime me se time part remove karna Sirf date ko rakhna.
+=> 3. Year/Month/Quarter/Week/day.
+=> 4. Earliest = Pehli ya purani date/time.
+=> 5. Latest = Nayi ya recent date/time.
+
+
+14. What is a CHANGE TYPE WITH LOCALE?
+=> Different countries me date format alag hota hai.
+=> Ye Date ke format ko change krta hai.
+=> Select Date table -> Using Locale -> select country.
+
+
+15. What is a ROLLING CALENDARS?
+=> Rolling Calendar ek aisa calendar hota hai jo fixed dates nahi leta, balki current date ke hisaab se automatically change hota rehta hai.
+
+
+16. What is a INDEX COLUMNS?
+=> Add Column -> Index column -> From 0 and 1.
+
+
+17. What is a CONDITIONAL COLUMNS?
+=> Conditional Column ka use hota hai conditions (IF-ELSE) ke basis par new column create karne ke liye.
+=> Add Column -> Conditional Column -> New Column Name -> Column Name(jis column pe hame Query perform krni hai ) -> Operators -> Value -> Output -> Else.
+
+
+18. What is a CALCULATED COLUMN BEST PRACTICES?
+=> Data ko source ke pass hi clean, ya calculate karoge to power bi system fast chalega.
+=> Data Source -> Power Query -> Power BI Front-End -> Published Reports.
+
+
+19. What is a Custom Column?
+=> Custom Column ka use hota hai apni formula (logic) likhkar new column banane ke liye.
+=> EX. [Product Price] - [Product Cost]
+
+
+20. NOTE=======>>>>>> 1. Cost
+		       → Product banane ya kharidne ka kharcha
+		      2. Product Price (Selling Price)
+		       → Product ko bechne ka price
+		      3. Revenue
+		       → Total paise jo sales se aate hain
+		      4. Profit
+      		       → Bacha hua paisa after cost
+=> mere pas 1 chis hai jiski cost 50 hai and uski price 100 hai and uska revenue 1000 hai to mije 500 ka profit ho.
+
+
+21. What is a GROUPING & AGGREGATING?(Transform, Home)
+=> GROUPING = Same data ko group me rakhna.
+=> AGGREGATING = us Group par Calculation karna.(SUM, MIN, MAX, AVG)
+=> Transform -> Group By -> Column name(jis column me same value ka group krna ho) -> New Column Name -> Operations -> Column(Jis column me Aggregation krna ho).
+
+
+22. What is a PIVOTING & UNPIVOTING?
+=> PIVOTING = Rows ki values ko column me convert krta hai.
+=> Rotates the table from vertical to horizontal.
+=> UNPIVOTING = Column ko rows me convert krta hai.
+=> Rotates the table from horizontal to vertical.
+
+
+23. What is a MERGING QUERIES?
+=> Merging Queries ka matlab hai 2 tables ko ek common column ki help se join karna.
+=> Jaise Excel me VLOOKUP ya XLOOKUP hota hai, waise hi power bi / power query me merge use hota hai.\
+EX. Table1 - Sales Data
+	Product Key	Sales
+	   101		 500
+	   102		 700
+
+    Table2 - Product Lookup
+	Product Key	Product Name
+	   101    	Laptop
+	   102		Mouse
+=> Merge Karne ke baad
+	Product key	Sales	Product Name
+	   101    	 500	   Laptop
+	   102		 700 	   Mouse
+=> Dono me Product Key Column Common hai. To Power Query Product Key Kebase par tables ko Connect Karta hai.
+=> Important = Tables merge kar sakte ho, iska matlab ye nahi ki hamesha merge hi karo.
+	       Bahut cases me better hota hai ki tables separate rakho aur data model me relationships banao.
+
+
+24. What is a APPENDING QUERIES?
+=> Appending Queries ka matlab hai 2 ya usse zyada table ko vertically combine (Stack) karna.
+=> Matlab ek table ki Rows dusri table ke niche add ho jati hai.
+=> Condition = Table me Same Columns aur same Data types hone chahiye.
+
+=> EX.  Sales 2020 Table
+	Product		Sales
+	Laptop		500
+	Mouse		200
+
+	Sales 2021 Table
+	Product		Sales
+	Laptop		700
+	Keyboard	300
+
+=> Append karne ke badd
+	Product		Sales
+	Laptop		500
+	Mouse		200
+	Laptop		700
+	Keyboard	300
+=> Yaha 2021 ki Rows 2020 ke niche add ho gayi.
+=> Agar tables me Same Column aur Same data types ho, to unhe combine (Stack) kar sakte ho.
+=> Append Karne se Rows Add hoti hai, Column nahi.
+
+
+NOTE =========== Merge = Column Add (Side me)
+		 Append = Rows Add (Niche)
+
+
+25. What is a DATA SOURCE SETTINGS and DATA SOURCE PARAMETERS?
+=> Data Source Parameters =
+Definition:
+Parameters ka use hota hai dynamic values set karne ke liye (jo easily change ho sake)
+
+Matlab: Ek value set karo, aur baad me usse easily change kar sakte ho
+
+Example:
+File path change karna
+Database name change karna
+Har jagah manually change karne ki zarurat nahi
+
+=> Data Source Settings =
+Definition:
+Settings ka use hota hai data source ki configuration manage karne ke liye
+Matlab: Connection ko control karna
+
+Isme kya hota hai:
+Credentials (login info)
+Permissions
+Data source change/update
+
+Parameters → Value ko dynamic banata hai (easily changeable)
+Settings → Data source ka connection control karta hai
+
+Parameters = Flexible values
+Settings = Connection control
+	
+
+26. What is a REFRESHING QUERIES?
+=> Power BI me jab ap Home Tab se Refresh Button dabate ho, to sab Queries automatically refresh ho jati hain.
+=> Matlab har table ka data update ho jata hai.
+=> Agar ap nahi chahte ki koi specific Query refresh ho to- Power Query Editor open karo us Power Query par Right-Click karo and Include in report refresh option uncheck kar do.
+
+
+27. WHAT IS A DATA MODEL?
+=> Tables ke beech me relation hai to vo Data model hai.
+=> jo tables ke beech me relation nahi hai to vo Data model nahi hai.
+
+
+28. what is a DATABASE NORMALIZATION?
+=> Normalization ek process hai jisme hum database ke tables aur columns ko properly organize karte hain Taaki duplicate data kam ho aur data sahi (accurate) rahe.
+
+=> Eliminate redundant data
+→ Duplicate data hataana
+👉 Table chhota hota hai aur speed fast ho jati hai
+
+=> Minimize errors and anomalies
+→ Data me galtiyan kam hoti hain (insert, update, delete me)
+👉 Data accurate rehta hai
+
+=> Simplify queries and structure
+→ Database ko simple aur properly organize karna
+👉 Queries likhna aur analysis karna easy ho jata hai
+
+NORMALIZATION = Database ko organize karna taaki Duplicate data kam ho errors reduce ho our analysis efficient ho.
+
+
+29. What is a FACT (Data Tables) & DIMENSION TABLES (Lookup Tables)?
+=> FACT TABLE = Fact Tables me Numerical Value ya Metrics hote hain jo Calculation aur Summarization ke liye use hote hain.
+EX. Sales, orders ,Profit ,Quantity
+=> DIMENSION TABLES = Dimension Table me descriptive information(details) hoti hai jo data ko filter ya group karne ke liye use hoti hai.
+EX. Product ,Dates ,Stores ,Regions
+
+
+30. What is a Different between Primary Key and Foreign Key?
+=> Primary Key						 Foreign Key
+-> Table ki unique identification key hoti hai.        ->Ek Reference key hati hai jo dusri table se connect  							 karti hai.
+-> Har row ko Uniquely identify karti hai.	       ->Dusri table ki primary key ko refer karti hai.
+-> Duplicate value allowed nahi hoti.		       ->Duplicates value allowed hoti hain.
+-> NULL Value allowed nahi hoti.		       ->kabhi-Kabhi NULL allowed ho sakti hai.
+-> Ek table me 1 hi Primary Key hoti hai.              ->Ek table me multiple Foreign Key ho sakti hain.
+
+
+31. What is a Different between FACT TABLE and DIMENSION TABLE?
+=> FACT TABLE						DIMENSION TABLE
+-> Numerical data Store 				Descriptive(Details) data store
+-> EX. Sales, Profit, Quantity				EX. Customer name, Product Name, Region
+-> Value repeat ho sakti hai				Primary key uaually unique hoti hai
+-> Calculations ke liye use hoti hai			Filtering and Grouping ke liye se hoti hai
+-> Foreign Keys Hoti hai				Primary key Hoti hai
+
+=> Dimension ki Primary Key Fact me Foreign ka kam karti hai.
+=> je Value repeat thay te Fact Table
+=> je Value repeat no thati hoy unique joy te Dimension table
+
+
+32. What is a RELATIONSHIPS VS. MERGED TABLES?
+=> Tables merge karne se duplicate data(redundancy) create ho jata hai our analysis ke liye zyada memory aur processing power lagti hai, jabki multiple small tables ke relational model me ye zyada efficient hota hai.
+
+| Feature      | Relationships                             | Merged Tables
+
+| Meaning      | Tables ko **connect** karna (link banana) | Tables ko **combine karke ek table                 							     banana** |
+| Data Storage | Tables alag-alag rehti hain               | Data ek hi table me aa jata hai             |
+| Purpose      | Analysis ke liye connection banana        | Data ko ek jagah lana                       |
+| Flexibility  | High (tables independent rehti hain)      | Low (merge ke baad change mushkil)          |
+| Performance  | Better for large models                   | Large data me slow ho sakta hai             |
+| Use Case     | Star schema, data modeling                | Jab ek hi table me data chahiye ho          |
+
+
+33. What is a CREATING TABLE RELATIONSHIPS?
+=> 1. Model View me mouse se click karke ek column ko dusre column par drag karke connect karna
+=> Primary Key ko uthao and Foreign Key par drag karo
+=> 2. “Manage Relationships” option ka use karke tables ke beech relationship manually add ya automatically detect karna
+
+
+34. What is a Two Types of Schemas?
+=> STAR => Star Schema Sabse Simple aur common data model hai, jisme ek fact table hoti hai aur uske around related dimension tables hoti hain, jo star ki shape jaise structure banati hain.
+STAR Schema -> Fact -> Dimension
+=> SNOWFLAKE => Snowflake Schema Star Schema ka Extension hota hai, jisme dimension tables ke beech bhi relation hote hai aur unke related Sub-dimension tables bhi hote hain.
+=> Dimension ke ander bhi dimension (Sub-Dimension)
+SNOWFLAKE => Fact -> Dimension -> Sub-Dimension
+
+NOTE ========= Dimension (Up)
+	       Fact   (Down)
+	       Flow => Down Flow
+
+
+35. What is a ACTIVE & INACTIVE RELATIONSHIPS?
+=> Ek time par sirf 1 relationship active ho sakta hai.
+=> Agar tum dusra relationship active karna chahte ho to Pehle wale relationship ko inactive(band) karna padega.
+=> Properties -> On and Off
+
+
+36. What is a RELATIONSHIP CARDINALITY?
+=> Many to One (*:1)
+   One to One (1:1)
+   One to Many (1:*)
+   Many to Many (1:1)
+
+=> Data Model me Ideally Relationship = One to Many (1:*)
+Primary Kay = Unique
+Foreign Key = Repeat
+
+
+37. What is a CONNECTING MULTIPLE FACT TABLES?
+=>
+
+81
+
+
+
+
+
+
+
+
+
+38. What is a FILTER CONTEXT & FLOW?
+=>
+
+
+
+
+
+
+
+
+
+
+
+
+
+39. What is a BI-DIRECTIONAL FILTERS?
+=> Bi-directional filter ka matlab hai filter dono direction me kaam karta hai (Table A → Table B aur Table B → Table A)
+=> Single se Both
+=> Properties -> Cross Filter Direction Single se Both
+
+
+40. What is a AMBIGUITY?
+=> Ambiguity ka matlab hai confusion jab Power BI ko samajh nahi aata ki filter kis path se apply kare
+=> Agar bahut saare two-way filters use karte hai, to multiple filter paths ban jate hai,jisme ambiguilty (Confusion) ho sakti hai.
+
+
+41. What is a HIDING FIELDS?
+=> Hiding Fields ka matlab hai kuch columns ya fields ko report view se hide karna.
+
+
+42. What is a MODEL LAYOUTS?
+=> Large model ko alag-alag views me organize karna
+Sales View → Sirf sales se related tables dikhte hain
+Returns View → Sirf returns se related tables dikhte hain
+
+
+43. What is a DATA FORMATS & CATEGORIES?
+=> DATA FORMATS = data ko kis type me dikhana hai.
+EX. Number, Currency, Percentage
+=> CATEGORIES = Power Bi Ko batana ki field kis type ki information represent karti hai.
+EX. City, Country, Address
+
+
+44. What is a HIERARCHIES?
+=> Hierarchies ka matlab hai data ko levels (order) me organize karna.
+=> Data ko step-by-step structure me arrange karte hain
+=> EX. Year -> Quarter -> Month -> Day
+       Country -> State -> City
+
+
+45. What is a CALCULATED FIELDS WITH DAX?
+=> Data Analysis Expressions
+=> DAX add karta hai Calculated Column, Measures , Row and filter context , Iterators.
+
+Calculated Column(For Filtering)
+Measures(For Aggregation)
+
+
+46. What is a M VS. DAX?
+=> M = Used in Power Query Editor
+       Data ko Extract, Transform, Load(ETL) Karne ke liye use hota hai.
+=> DAX = Used in Front-End (Report/Model/View)
+         Data ko analysis karne aur Calculations (Measures, Columns) le liye use hota hai.
+
+
+47. What is a Calculated Columns?
+=> Calculated Columns ka use hota hai new column banane ke liye using formula
+Calculated Column = Formula se new column
+Har row ke liye value calculate hoti hai
+Use hota hai filtering & grouping ke liye
+Aggregation ke liye use nahi karte
+
+
+48. What is a DAX MEASURES?
+=> Measures DAX formulas hote hain jo calculated values (mostly aggregation) generate karte hain
+Measure = Dynamic calculation (DAX)
+Visual me hi dikhta hai
+Filters ke hisaab se change hota hai
+Aggregation ke liye use hota hai
+
+
+49. What is a IMPLICIT VS. EXPLICIT MEASURES?
+=> Implicit Measure = Jab tum direct numeric field ko visual me drag karti ho
+                      Aur waha Sum, Avg, Count select karti ho
+		      Sirf us visual tak limited hota hai
+		      Kahin aur use nahi kar sakte ❌
+=> Explicit Measure = Jab tum khud DAX formula likh kar measure banati ho
+                      Poore model me kahin bhi use kar sakte ho
+                      Dusre measures me bhi use ho sakta hai ✅
+
+
+50. What is a QUICK MEASURES?
+=> Quick Measures wo pre-built calculations hote hain jisse tum bina DAX likhe measures bana sakti ho.
+
+
+51. What is a different between CALCULATED COLUMNS VS. MEASURES?
+=> CALCULATED COLUMNS = Har row ke basis par value calculate hoti hai
+			Har row me fixed value save hoti hai Isse file size badh sakta hai
+			Jab data refresh hota hai ya columns change hote hain Tab dobara calculate hota hai
+			Mostly data ko filter aur categorize karne ke liye use hota ha
+=> MEASURES = Values report ke filters ke basis par calculate hoti hain
+	      Table me koi new column ya data store nahi hota File size increase nahi hota
+	      Jaise hi filters change hote hain Value automatically change ho jati hai
+	      Mostly SUM, COUNT, AVERAGE jaise calculations ke liye use hota hai
+
+
+52. What is a PRO TIP: MEASURE TABLES?
+=> Power Query Editor -> Enter Data -> Measures
+=> Ab ye Measures table me New Measures banate jav.
+
+
+53. What is a FILTER CONTEXT?
+=> 108
+
+
+
+
+
+
+
+
+
+
+
+54. What is a DAX SYNTAX?
+=> Total Quantity: = SUM(Transactions[quantity])
+Total Quantity: = MEASURE NAME
+SUM = FUNCTION NAME
+Transactions = TABLE NAME
+quantity = COLUMN NAME
+Calculated Column → Har row ka value directly de deta hai
+Measure → Direct value nahi de sakta, calculation (SUM, etc.) chahiye
+
+
+55. What is a COUNTING FUNCTIONS?  (Non-empty → jisme kuch value present hai)
+=> COUNT
+→ Column me non-empty values count karta hai
+👉 Boolean (TRUE/FALSE) count nahi karta
+
+=> COUNTA
+→ Column me non-empty values count karta hai
+👉 Boolean (TRUE/FALSE) bhi count karta hai
+
+=> DISTINCTCOUNT
+→ Column me unique (alag-alag) values count karta hai
+
+=> COUNTROWS
+→ Table me total rows count karta hai
+👉 Pure table ya filtered table dono me use hota hai
+
+
+56. What is a BASIC LOGICAL FUNCTIONS?
+=> IF
+→ Condition check karta hai
+👉 TRUE ho to ek result, FALSE ho to dusra
+
+Syntax:
+IF(Condition, True Value, False Value)
+
+=> IFERROR
+→ Agar error aaye to alternate value return karta hai
+👉 Error nahi ho to original value
+
+Syntax:
+IFERROR(Value, ValueIfError)
+
+=> SWITCH
+→ Multiple conditions check karta hai
+👉 Har condition ke hisaab se result deta hai
+
+Syntax:
+SWITCH(Expression, Value1, Result1, ..., Else)
+
+=> AND
+→ Check karta hai dono conditions TRUE hain ya nahi
+👉 Dono true → TRUE, warna FALSE
+
+Syntax:
+AND(Condition1, Condition2)
+
+=> OR
+→ Check karta hai koi ek condition TRUE hai ya nahi
+👉 Ek bhi true → TRUE
+
+Syntax:
+OR(Condition1, Condition2)
+
+
+57. What is a SWITCH Function?
+=> SWITCH ek function hai jo ek expression ko multiple values ke saath compare karta hai
+👉 Aur jo match hota hai uska result return karta hai
+
+🔹 Syntax
+SWITCH(Expression, Value1, Result1, Value2, Result2, ..., Else)
+Expression → Jo value check karni hai
+Value + Result → Agar match ho to kya return kare
+Else → Agar kuch bhi match na ho
+
+
+58. What is a TEXT FUNCTIONS?
+=> 🔹 SUBSTITUTE
+
+Definition:
+Text me se old text ko new text se replace karta hai
+
+👉 Specific word/character change karne ke liye use hota hai
+
+Syntax:
+SUBSTITUTE(Text, OldText, NewText, [InstanceNumber])
+
+Example:
+SUBSTITUTE("Hello World", "World", "Power BI")
+👉 Result = Hello Power BI
+
+🔹 SEARCH
+
+Definition:
+Text me koi word/character kis position par hai ye batata hai
+
+👉 Left se count karta hai
+
+Syntax:
+SEARCH(FindText, WithinText, [StartPosition], [NotFoundValue])
+
+Example:
+SEARCH("World", "Hello World")
+👉 Result = 7 (W 7th position par hai)
+
+
+59. What is a RELATED?
+=> RELATED() ka use hota hai dusri table se value lana (relationship ke through)
+👉 Jaise Excel me VLOOKUP kaam karta hai
+
+👉 Agar 2 tables connected hain (Primary Key – Foreign Key)
+👉 To RELATED function se tum dusri table ka column apni table me la sakti ho
+
+🔹 Syntax
+
+RELATED(ColumnName)
+
+🔹 Example
+Sales table me ProductID hai
+Product table me Product Name hai
+
+👉 Formula:
+
+Product Name = RELATED('Product Lookup'[Product Name])
+
+👉 Result: Sales table me Product Name add ho jayega
+
+🔹 Important Points
+Relationship hona zaruri hai
+Ye row-wise kaam karta hai (row context)
+Mostly calculated column me use hota hai
+Direct measure me use nahi hota (unless inside SUMX, FILTER, etc.)
+
+
+60. What is a CALCULATE?
+=>CALCULATE() ka use hota hai kisi calculation ko naye filters ke saath evaluate karne ke liye
+👉 Ye existing filters ko change ya override kar sakta hai
+
+👉 Tum ek calculation likhti ho
+👉 Aur us par apne filters apply karti ho
+👉 Result us naye filter context ke hisaab se aata hai
+
+🔹 Syntax
+CALCULATE(Expression, Filter1, Filter2, ...)
+
+🔹 Example
+USA Sales =
+CALCULATE(
+    [Total Sales],
+    'Territory Lookup'[Country] = "USA"
+)
+
+👉 Ye sirf USA ka sales calculate karega (chahe report me kuch bhi filter ho)
+
+🔹 Important Points
+Filters add ya replace kar sakte ho
+Measure ya formula use hota hai expression me
+Filters me column-based condition hoti hai (measure nahi)
+
+CALCULATE apna filter force karta hai
+Jo pehle se filter hai usko replace kar deta hai
+
+
+61. What is a DAX MEASURE TOTALS?
+=> Measure total simple addition nahi hota
+Har measure apne filter context me calculate hota hai
+Distinct count me same value repeat nahi hoti
+
+Measure Total = Independent calculation (sum nahi hota)
+
+
+62. What is a ALL?
+=> ALL() ka use hota hai filters remove karne ke liye
+👉 Ye table ya column ka pura data return karta hai (without any filter)
+
+👉 Normally filters apply hote hain (year, product, etc.)
+👉 ALL() use karne par wo filters ignore ho jate hain
+
+🔹 Syntax
+ALL(Table or Column)
+🔹 Example
+Total Sales All =
+CALCULATE(
+    [Total Sales],
+    ALL(Products[Category])
+)
+
+👉 Ye sab categories ka total sales dikhayega
+👉 Chahe report me koi bhi filter laga ho
+
+🔹 Important Points
+Table ya column ke filters hata deta hai
+Mostly CALCULATE ke saath use hota hai
+“% of Total” jaise calculations me useful
+🔹 Hinglish
+
+ALL ka matlab:
+👉 Jo bhi filter laga hai usko ignore karo
+
+🔹 Short Line
+
+👉 ALL = Filters remove karke full data par calculation 👍
+
+
+63. What is a FILTER?
+=>FILTER() ka use hota hai table me se specific rows select karne ke liye (condition ke basis par)
+👉 Ye ek filtered (subset) table return karta hai
+
+🔹 Syntax
+FILTER(Table, Condition)
+
+👉 Tum ek table leti ho
+👉 Us par condition lagati ho
+👉 Aur sirf matching rows return hoti hain
+
+🔹 Example
+FILTER(
+    'Territory Lookup',
+    'Territory Lookup'[Country] = "USA"
+)
+
+👉 Result: Sirf USA wali rows
+
+🔹 Important Points
+Har row par condition check hoti hai (row by row)
+Complex conditions handle kar sakta hai
+Measure ko bhi use kar sakta hai condition me
+
+
+64. What is a ITERATOR FUNCTIONS?
+=> Iterator functions wo functions hote hain jo table ki har row par loop (iterate) karte hain
+👉 Aur har row par calculation karke final result aggregate (SUM, AVG, etc.) karte hain
+
+👉 Step-by-step:
+
+Table lo
+Har row par formula apply karo
+Fir sab results ko combine (SUM/AVG) karo
+🔹 Example (SUMX)
+SUMX(Sales, Sales[Price] * Sales[Quantity])
+
+👉 Har row ke liye:
+
+Price × Quantity calculate hoga
+👉 Fir sabka total sum milega
+
+🔹 Important Points
+Row-by-row calculation hota hai
+Fir aggregation hota hai (SUM, COUNT, AVG, etc.)
+Temporary column jaisa behave karta hai
+
+🔹 Common Iterator Functions
+SUMX → Sum of calculated values
+COUNTX → Count
+AVERAGEX → Average
+MAXX / MINX → Max / Min
+RANKX → Ranking
+🔹 Hinglish
+
+Iterator ka matlab:
+👉 Har row par calculation karo
+👉 Fir sabko combine karo
+
+🔹 Short Line
+
+👉 Iterator (X) = Row-wise calculation + final aggregation 👍
+
+
+65. What is a TIME INTELLIGENCE?
+=> Time Intelligence ka use hota hai date-based calculations karne ke liye
+👉 Jaise: last month, year-to-date, running total, etc.
+
+🔹 1. Running Total (Rolling Period)
+CALCULATE(
+    [Measure],
+    DATESINPERIOD(Calendar[Date], MAX(Calendar[Date]), -10, DAY)
+)
+
+👉 Last 10 days ka data calculate karta hai
+👉 Dynamic hota hai (date ke hisaab se change hota hai)
+
+🔹 2. Performance To-Date (YTD, MTD, QTD)
+CALCULATE([Measure], DATESYTD(Calendar[Date]))
+
+👉 Year start se ab tak ka total (Year-To-Date)
+
+👉 Similar:
+
+DATESMTD → Month-to-date
+DATESQTD → Quarter-to-date
+
+🔹 3. Previous Period
+CALCULATE(
+    [Measure],
+    DATEADD(Calendar[Date], -1, MONTH)
+)
+
+👉 Previous month ka data return karta hai
+
+🔹 Hinglish Samajh
+Running Total → Last kuch days/months ka total
+Performance To Date → Starting se ab tak ka total
+Previous Period → Pichla month/year compare
+🔹 Pro Tip
+
+👉 Moving average =
+Running total ÷ number of days/months
+
+🔹 Short Line
+
+👉 Time Intelligence = Date ke hisaab se smart calculations 👍
+
+
+NOTE ================
+=====================
+Use explicit measures
+→ Hamesha measure khud bana ke use karo
+👉 Ye reusable hote hain aur dusre measures me bhi use ho sakte hain
+
+Use fully-qualified column names
+→ Column ko Table[Column] format me likho
+👉 Code readable aur clear hota hai
+
+Calculated Column vs Measure samjho
+→ Calculated Column → Filtering / grouping ke liye
+→ Measure → Aggregation (SUM, COUNT) ke liye
+
+Move calculations upstream
+→ Jitna ho sake calculations Power Query ya source me karo
+👉 Report fast aur efficient hota hai
+
+Minimize iterator functions
+→ SUMX, COUNTX jaise functions kam use karo
+👉 Especially large data me slow ho sakte hain
+
+
+
+
+
+ 
