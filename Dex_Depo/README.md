@@ -22,7 +22,7 @@
 
 &#x20;
 
-=> 1. Calculated Columns : 
+=> 1. Calculated Columns :
 
 => 1. Profit Column (Sales\_ Fact)
 
@@ -32,7 +32,7 @@
 
 => 2. Return Flag Column (Sales\_ Fact)
 
-&#x20;  Sales\_ Fact -> New Column ->   
+&#x20;  Sales\_ Fact -> New Column ->
 
 &#x20;  Return Flag = IF(ISBLANK(LOOKUPVALUE(Returns\_ Fact\[Return ID],Returns\_ Fact\[Sales ID], Sales\_ Fact\[Sales ID])),"Not Returned", "Returned")
 
@@ -90,7 +90,7 @@
 
 
 
-=> 4. Measures Management 
+=> 4. Measures Management
 
 
 
@@ -104,7 +104,7 @@
 
 
 
-=> 5. Filter Context \& Behavior : 
+=> 5. Filter Context \& Behavior :
 
 
 
@@ -164,7 +164,7 @@
 
 7\. SWITCH (Calculated Columns)
 
-&#x20;  Sales Category = SWITCH(TRUE(),Sales\_ Fact\[Sales Amount] < 500, "Low", Sales\_ Fact\[Sales Amount] < 1000, "Medium", "High")  
+&#x20;  Sales Category = SWITCH(TRUE(),Sales\_ Fact\[Sales Amount] < 500, "Low", Sales\_ Fact\[Sales Amount] < 1000, "Medium", "High")
 
 
 
@@ -272,45 +272,39 @@
 
 
 
-= 10. Matrix 
+= 10. Matrix
 
-=> Rows 
+=>1. Rows = Region Name
 
-\- Region Name
+&#x20;           Month
 
-\- Category
+&#x20; 2. Values = Total sales
 
-\- Segment
+&#x09;      Sales Selected Region
 
-\- Month
-
-
-
-=> Column
-
-\- Year
+&#x09;      Count High Sales
 
 
 
-=> Values
+=>1. Rows = Region Name
 
-\- Total sales
+&#x09;    year
 
-\- Total Profit
+&#x09;    Month
 
-\- Avg Profit per Transaction
+&#x20; 2. Values = YTD sales
 
-\- YTD Sales
-
-\- Last Year Sales
-
-\- Sales Last 3 Months
-
-\- Running Total
-
-\- Return Rate
+&#x09;      Running Total
 
 
 
+=>1. Rows = Year
 
+&#x09;    Month
+
+&#x20; 2. Column = Region Name
+
+&#x20; 3. Values = YTD Sales
+
+&#x20;  	      Running Total
 
